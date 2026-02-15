@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease;
+}
+
+
+.glass {
+    background: rgba(15, 15, 15, 0.75);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.app-container {
+    width: 650px;
+    max-width: 95%;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.8);
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.badge {
+    background: rgba(255,255,255,0.1);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.title {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+.question {
+    font-size: 22px;
+    margin-bottom: 20px;
+    
+}
+
+
+.main-btn {
+    padding: 14px 30px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255,152,0,0.6);
+}
+
+
+#answers-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.answer-btn {
+    padding: 15px;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    transition: 0.25s;
+}
+
+.answer-btn:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-3px);
+}
+
+
+.correct {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: black;
+}
+
+.wrong {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+
+.result-text {
+    font-size: 18px;
+    margin: 20px 0;
+    
+}
+
+
+.hide {
+    display: none;
+}
+
+.screen {
+    text-align: center;
+    
+}
+
+.answer-btn.correct:hover {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    transform: translateY(-3px);
+}
+
+.answer-btn.wrong:hover {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    transform: translateY(-3px);
+}
+
+#question-img {
+    width: 100%;
+    max-width: 500px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+
+/* вери сикрет кнопка!*/
+
+.secret-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    opacity: 0.25;
+    transition: 0.2s;
+    z-index: 1000;
+}
+
+.secret-btn:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+#chicken {
+    position: fixed;
+    bottom: 40px;
+    right: -80px;          
+    font-size: 48px;
+    cursor: pointer;
+    display: none;
+    animation: runChicken 5s linear infinite;
+    z-index: 9999;
+}
+
+@keyframes runChicken {
+    from {
+        right: -80px;
+    }
+    to {
+        right: 110%;
+    }
+}
+
+/* ===== шорт ===== */
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    padding: 10px;
+    text-align: center;
+    z-index: 999;
+}
+
+.top-bar button {
+    margin: 5px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #222;
+    color: white;
+    transition: 0.3s;
+}
+
+.top-bar button:hover {
+    background: #444;
+}
+
+/* МОДАЛКА */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.hide {
+    display: none !important;
+}
+
+.modal-content {
+    background: #111;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+}
+
+
+/* ТEМНА ТЕМА */
+
+
+body.light {
+    background-image: url("light.jpg");
+}
+
+body.dark {
+    background-image: url("dark.png");
+}
+
+.creator-photo {
+    height: 300px;
+}

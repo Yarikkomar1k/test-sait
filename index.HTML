@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>CS Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="top-bar">
+    <button id="theme-toggle">🌙 Тема</button>
+    <button id="creator-btn">👤 Розробник</button>
+</div>
+
+
+<div id="creator-modal" class="modal hide">
+    <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+        <img src="yellow_a.jpeg" class="creator-photo">
+        <h3>Розрбник сайту</h3>
+        <h3>Komar</h3>
+        <p>Контакти:</p>
+        <a href="https://steamcommunity.com/profiles/76561199554233767/" target="_blank">Steam</a><br>
+    </div>
+</div>
+
+
+<div class="app-container glass">
+    
+    <div id="start-screen" class="screen">
+        <button id="secret-btn" class="secret-btn">🤔</button>
+        <div id="chicken">🐓</div>
+        <h1 class="title">CS 2 QUIZ</h1>
+        <p class="subtitle">Перевір свої знання гри</p>
+        <button id="start-btn" class="main-btn">Start</button>
+    </div>
+
+    <div class="header">
+        <div class="badge">⏱ <span id="timer">15</span></div>
+        <div class="badge">⭐ <span id="score-display">0</span></div>
+    </div>
+
+    <div id="quiz-screen" class="screen hide">
+        <h2 id="question-text" class="question"></h2>
+        <div id="answers-container"></div>
+    </div>
+
+    <div id="result-screen" class="screen hide">
+        <h2 class="title">Game finished</h2>
+        <p id="result-text" class="result-text"></p>
+        <button id="restart-btn" class="main-btn">Restart</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
